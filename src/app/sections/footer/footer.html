@@ -1,0 +1,49 @@
+<footer class="footer">
+  <div class="footer_container">
+    <div class="footer_top">
+      <div class="footer_brand">
+        <div class="footer_logo">
+          <span class="n">N</span><span class="o">o</span><span class="v">v</span><span class="a">a</span>Mind
+        </div>
+        <p class="footer_description">{{ description }}</p>
+      </div>
+
+      <div class="footer_column">
+        <h4 class="footer_heading">Product</h4>
+        <div class="footer_links">
+          @for (link of productLinks; track link) {
+            <a href="#" class="footer_link">{{ link }}</a>
+          }
+        </div>
+      </div>
+
+      <div class="footer_column">
+        <h4 class="footer_heading">Company</h4>
+        <div class="footer_links">
+          @for (link of companyLinks; track link) {
+            <a href="#" class="footer_link">{{ link }}</a>
+          }
+        </div>
+      </div>
+
+      <div class="footer_column">
+        <h4 class="footer_heading">Resources</h4>
+        <div class="footer_links">
+          @for (link of resourcesLinks; track link) {
+            <a href="#" class="footer_link">{{ link }}</a>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <p class="footer_copy">© {{ currentYear }} NovaMind. All rights reserved.</p>
+
+      <div class="footer_bottom-links">
+        @for (link of bottomLinks; track link) {
+          <a href="#" class="footer_bottom-link">{{ link }}</a>
+        }
+      </div>
+    </div>
+  </div>
+</footer>

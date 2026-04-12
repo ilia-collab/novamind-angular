@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="navbar_container">
+    <div class="navbar_logo">
+      <span class="n">N</span><span class="o">o</span><span class="v">v</span><span class="a">a</span>Mind
+    </div>
+
+    <div class="navbar_links">
+      @for (link of NavLinks; track link) {
+        <a href="#" class="navbar_link">{{ link }}</a>
+      }
+    </div>
+
+    <div class="navbar_actions">
+      <button class="navbar_secondary-btn">Watch Demo</button>
+      <button class="navbar_primary-btn">Get Started</button>
+    </div>
+
+    <button class="navbar_burger" [class.open]="menuOpen()" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" [class.open]="menuOpen()">
+    <div class="mobile-container">
+      @for (link of NavLinks; track link) {
+        <a href="#" class="mobile_menu_link" (click)="closeMenu()">{{ link }}</a>
+      }
+    </div>
+
+    <div class="mobile_menu-actions">
+      <button class="navbar_secondary-btn mobile_btn" (click)="closeMenu()">Watch Demo</button>
+      <button class="navbar_primary-btn mobile_btn" (click)="closeMenu()">Get Started</button>
+    </div>
+  </div>
+</nav>
