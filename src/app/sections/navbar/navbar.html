@@ -24,8 +24,8 @@
 
   <div class="mobile-menu" [class.open]="menuOpen()">
     <div class="mobile-container">
-      @for (link of NavLinks; track link) {
-        <a href="#" class="mobile_menu_link" (click)="closeMenu()">{{ link }}</a>
+      @for (link of NavLinks; track link.label) {
+        <a [href]="link.href" class="mobile_menu_link" (click)="closeMenu()">{{ link.label }}</a>
       }
     </div>
 

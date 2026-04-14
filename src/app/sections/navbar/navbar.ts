@@ -11,7 +11,8 @@ export class Navbar {
   protected NavLinks = [
     {label: 'Features', href:"#features"},
     {label: 'Products', href: "#products"},
-    {label: 'Testimonials', href: "testimonials"}
+    {label: 'Stats', href: "#stats"},
+    {label: 'Testimonials', href: "#testimonials"}
   ]
 
   protected menuOpen = signal(false)

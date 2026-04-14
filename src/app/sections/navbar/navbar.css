@@ -3,12 +3,16 @@
     top: 0;
     z-index: 1000;
     width: 100%;
-    backdrop-filter: blur(28px);
+    backdrop-filter: blur(20px);
     background-color: rgba(5, 10, 24, 0.75);
     border-bottom:1px solid hsl(230 15% 18% / 0.4);
     animation-name: navbarDrop;
     animation-duration: 0.8s;
     animation-timing-function: ease-out;
+}
+
+#nova{
+  
 }
 
 @keyframes navbarDrop {
@@ -100,6 +104,7 @@
     transition: 0.3s ease;
     font-family: sans-serif;
 }
+
 
 .navbar_link:hover{
     color: white;
