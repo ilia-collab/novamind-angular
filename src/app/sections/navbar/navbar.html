@@ -5,8 +5,8 @@
     </div>
 
     <div class="navbar_links">
-      @for (link of NavLinks; track link) {
-        <a href="#" class="navbar_link">{{ link }}</a>
+      @for (link of NavLinks; track link.label) {
+        <a [href]="link.href" class="navbar_link">{{ link.label }}</a>
       }
     </div>
 

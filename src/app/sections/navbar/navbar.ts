@@ -9,9 +9,9 @@ import { Component, signal, HostListener } from '@angular/core';
 export class Navbar {
 
   protected NavLinks = [
-    'Features',
-    'Product',
-    'Testimonials'
+    {label: 'Features', href:"#features"},
+    {label: 'Products', href: "#products"},
+    {label: 'Testimonials', href: "testimonials"}
   ]
 
   protected menuOpen = signal(false)
