@@ -164,6 +164,7 @@
 }
 
 .navbar_primary-btn:hover{
+  color: white;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(34, 211, 238, 0.22);
 }
