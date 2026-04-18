@@ -1,4 +1,7 @@
-import { Component, computed, signal } from '@angular/core';
+import { AfterViewInit, Component, computed, signal } from '@angular/core';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger)
 
 type TabId = 'dashboard' | 'workflow' | 'insights'
 
@@ -20,7 +23,54 @@ type showCaseItem = {
   templateUrl: './showcase.html',
   styleUrl: './showcase.css',
 })
-export class Showcase {
+export class Showcase implements AfterViewInit {
+
+  ngAfterViewInit(): void {
+    gsap.from('.showcase-container', {
+      scrollTrigger: {
+        trigger: '.showcase-container',
+        start: 'top 90%'
+      },
+      opacity: 0,
+      y: 40,
+      duration: 1,
+      ease: 'power3.out'
+    })
+    gsap.from('.showcase-btns', {
+      scrollTrigger: {
+        trigger: '.showcase-container',
+        start: 'top 70%'
+      },
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: 'power3.out'
+    })
+    gsap.from('.showcase-card', {
+      scrollTrigger: {
+        trigger: '.showcase-container',
+        start: 'top 60%'
+      },
+      opacity: 0,
+      x: 40,
+      duration: 2.1,
+      stagger: 0.5,
+      ease: 'power3.out'
+    })
+    gsap.from('.container', {
+      scrollTrigger: {
+        trigger: '.showcase-container',
+        start: 'top 50%'
+      },
+      opacity: 0,
+      x: 40,
+      duration: 1.2,
+      stagger: 0.3,
+      ease: 'power3.out'
+    })
+  }
+
   protected tabs: showCaseItem[] = [
     {
       id: 'dashboard',

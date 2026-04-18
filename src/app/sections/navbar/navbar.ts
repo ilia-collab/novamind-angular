@@ -7,7 +7,6 @@ import { Component, signal, HostListener } from '@angular/core';
   styleUrl: './navbar.css',
 })
 export class Navbar {
-
   protected NavLinks = [
     {label: 'Features', href:"#features"},
     {label: 'Products', href: "#products"},

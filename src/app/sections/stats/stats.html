@@ -1,20 +1,10 @@
 <section id="stats" class="stats-parent">
     <div class="stats-container">
-        <div class="stats-box">
-            <h1 class="title">{{title[0]}}</h1>
-            <p class="desc">{{desc[0]}}</p>
-        </div>
-        <div class="stats-box">
-            <h1 class="title">{{title[1]}}</h1>
-            <p class="desc">{{desc[1]}}</p>
-        </div>
-        <div class="stats-box">
-            <h1 class="title">{{title[2]}}</h1>
-            <p class="desc">{{desc[2]}}</p>
-        </div>
-        <div class="stats-box"> 
-            <h1 class="title">{{title[3]}}</h1>
-            <p class="desc">{{desc[3]}}</p>
-        </div>
+        @for (item of box; track item) {
+            <div class="stats-box">
+                <h1 class="title">{{item.title}}</h1>
+                <p class="desc">{{item.desc}}</p>
+            </div>
+        }
     </div>
 </section> 

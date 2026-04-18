@@ -44,20 +44,27 @@ span{
     border: 1px solid rgba(255, 255, 255, 0.08);
     background-color: rgba(58, 48, 48, 0.08);
     border-radius: 15px;
-    transition: 0.3s ease;
     width: 400px;
     height: 215px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    transition: 0.3s ease;
 }
 
 .test-boxes:hover{
     background-color: rgba(108, 98, 98, 0.08);
-    transform: translateY(-2px);
     .lucide-star{
         box-shadow: 0 4px 7px rgba(34, 211, 238, 0.12);
+        transform: translateY(-2px);
+        transition: 0.3s ease;
+    }
+    .box-desc{
+        transform: translateY(-2px);
+        transition: 0.3s ease;
+    }
+    .quote-sector{
+        transform: translateY(-2px);
+        transition: 0.3s ease;
     }
 }
 

@@ -210,7 +210,6 @@
 
 .orb_glow {
   position: absolute;
-  border-radius: 50%;
   filter: blur(60px);
   opacity: 0.65;
   animation: pulseGlow 5s ease-in-out infinite;
@@ -231,7 +230,6 @@
 
 .orb_ring {
   position: absolute;
-  border-radius: 50%;
   border: 1px solid rgba(125, 211, 252, 0.18);
 }
 
@@ -288,6 +286,13 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  transition-duration: 0.4s;
+  cursor: context-menu;
+}
+
+.floating_card:hover{
+    background: rgba(47, 38, 38, 0.06);
+    border: 1px solid rgba(156, 139, 139, 0.1);
 }
 
 .floating_card strong {

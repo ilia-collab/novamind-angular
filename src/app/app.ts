@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, AfterViewInit } from '@angular/core';
 import { Navbar } from './sections/navbar/navbar';
 import { Hero } from './sections/hero/hero';
 import { Features } from './sections/features/features';
@@ -18,11 +18,14 @@ import { Footer } from './sections/footer/footer';
     Cta,
     Stats,
     Testimonials,
-    Footer
-  ],
+    Footer,
+],
   templateUrl: './app.html',
   styleUrl: './app.css'
-})
-export class App {
+})  
+export class App  {
+
   protected readonly title = signal('novamind');
+
+
 }
